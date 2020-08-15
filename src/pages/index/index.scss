@@ -1,0 +1,76 @@
+.index_mine {
+  position: relative;
+  .index {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    .index_top {
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card_ {
+      width: 50%;
+      margin: 15px;
+      border-radius: 8px;
+      padding: 2% 0;
+      // background:#c43326;
+      padding-top: 10px;
+      border: 2px transparent solid;
+      border-image: linear-gradient(#303555, #65484d) 10 1;
+      cursor: pointer;
+      color: #fff;
+      transition: all 0.4s;
+      &:hover {
+        width: 100%;
+        color: #ff8b36;
+      }
+      .card_list {
+        height: 20%;
+        .card_list_text {
+          font-size: 30px;
+          text-align: center;
+        }
+        .wenzi {
+          font-size: 18px;
+          padding-top: 5px;
+        }
+      }
+    }
+    .index_title {
+      width: 100%;
+      line-height: 3;
+      font-family: fantasy;
+      font-size: 100px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // text-shadow: 7px -7px 5px #4b3c67;
+    }
+  }
+  .index_sec {
+    width: 100%;
+    background-image: url('../../assets/bg_next.jpg');
+    background-size: 100% 100%;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  .index_huakuai {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .index_next {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #333;
+      opacity: 0.7;
+    }
+  }
+}

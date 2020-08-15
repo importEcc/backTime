@@ -1,0 +1,76 @@
+.video-component {
+  width: 500px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+  background: black;
+  .v-video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .v-control {
+    transition: all 0.3s;
+    opacity: 0;
+    color: white;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    min-width: 50px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(0, 0, 0, 0.1) 40%,
+      rgba(0, 0, 0, 0.5) 98%,
+      #ffffff 100%
+    );
+
+    .v-control-long {
+      width: 100%;
+      height: 5px;
+      border-radius: 8px;
+      background: pink;
+      z-index: 1;
+      font-size: 7px;
+      line-height: 2;
+      position: relative;
+      .v-control-long-block {
+        position: absolute;
+        width: 30px;
+        height: 10px;
+        background: #3cc;
+        top: -3px;
+        border: 0;
+        // left: 20%;
+        outline: cornflowerblue;
+        border-radius: 3px;
+        z-index: 3;
+        line-height: 1.5;
+        text-align: center;
+      }
+      .v-control-long-ed {
+        width: 0;
+        height: 5px;
+        border-radius: 8px 0 0 8px;
+        z-index: 2;
+        background: white;
+      }
+    }
+
+    .v-c-bottom {
+      width: 94%;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      .v-control-item {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  &:hover .v-control {
+    opacity: 1;
+  }
+}
