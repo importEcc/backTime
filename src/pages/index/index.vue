@@ -13,20 +13,34 @@
                     </div>
                 </div>
             </div>
-            <div class="index_title">
-                Welcome to my house
+            <div class="index_head">
+                <div class="index_title">Welcome to my house</div>
+                <div class="index_info">
+                    <div class="index_info_box box_left"></div>
+                    <div class="index_info_box box_right"></div>
+                </div>
             </div>
+
         </div>
         <div class="index_huakuai"
-             :style="{top:(col-100)+'px'}">
+             :style="{top:(col-100)+'px'}"
+             v-show="!isBot">
             <div class="index_next"
                  @click="next()">
-
+                1/2
             </div>
         </div>
         <div class="index_sec"
              :style="actives">
 
+        </div>
+        <div class="index_huakuai"
+             :style="{top:(col-100)+'px'}"
+             v-show="isBot">
+            <div class="index_next"
+                 @click="next()">
+                2/2
+            </div>
         </div>
     </div>
 </template>
@@ -54,8 +68,28 @@ export default {
                     card_EN_name: 'Component',
                     path: 'mobile'
                 },
+                {
+                    id: 3,
+                    card_CN_name: '组件',
+                    card_EN_name: 'Component',
+                    path: 'mobile'
+                },
+                {
+                    id: 3,
+                    card_CN_name: '组件',
+                    card_EN_name: 'Component',
+                    path: 'mobile'
+                },
+                {
+                    id: 3,
+                    card_CN_name: '组件',
+                    card_EN_name: 'Component',
+                    path: 'mobile'
+                },
             ],
-            actives: {}
+            actives: {},
+            isBot: false,
+            nowTime: new Date()
         }
     },
     created () {
@@ -70,6 +104,9 @@ export default {
         },
         col: function () {
             return localStorage.getItem('col')
+        },
+        TimeDown: function () {
+
         }
     },
     methods: {
@@ -77,7 +114,14 @@ export default {
             this.$router.push({ name: item.path })
         },
         next () {
-            this.actives.top = 0
+            this.actives.position = 'absolute'
+            if (!this.isBot) {
+                this.actives.top = 0
+                this.isBot = true
+            } else {
+                this.actives.top = window.localStorage.getItem('col') + 'px'
+                this.isBot = false
+            }
         }
     },
 }
