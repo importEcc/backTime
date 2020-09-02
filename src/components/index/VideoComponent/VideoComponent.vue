@@ -3,19 +3,19 @@
         <video ref="video"
                class="v-video"
                @click="played()">
-            <source src="http://gk-miniprogram.oss-cn-beijing.aliyuncs.com/xn_apk/1589427523002-22007-b816c64710_1.mp4"
+            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
                     type="video/mp4">
         </video>
         <div class="v-control"
              @mouseup="upblock()">
             <div ref='long'
                  class="v-control-long"
-                 @mousemove="moveblocks($event)"
                  @mousedown="downblock($event)">
                 <div ref="block"
                      :style="moveblock"
                      class="v-control-long-block"
-                     @mouseout="outblock()">{{Number(jindu.toString().match(/^\d+(?:\.\d{0,2})?/))}}%</div>
+                     @mouseup="outblock()"
+                     @mousemove="moveblocks($event)">{{Number(jindu.toString().match(/^\d+(?:\.\d{0,2})?/))}}%</div>
                 <div ref="longger"
                      class="v-control-long-ed"
                      :style="edlong">
@@ -112,7 +112,7 @@ export default {
         },
         //鼠标移出滑块
         outblock () {
-            this.isclick = false
+            // this.isclick = false
         },
         //鼠标按下滑块
         downblock (event) {

@@ -16,8 +16,6 @@
             <div class="index_head">
                 <div class="index_title">Welcome to my house</div>
                 <div class="index_info">
-                    <div class="index_info_box box_left"></div>
-                    <div class="index_info_box box_right"></div>
                 </div>
             </div>
 
@@ -64,15 +62,15 @@ export default {
                 },
                 {
                     id: 3,
-                    card_CN_name: '组件',
-                    card_EN_name: 'Component',
-                    path: 'mobile'
+                    card_CN_name: '鼠标',
+                    card_EN_name: 'Mouse',
+                    path: 'mouse'
                 },
                 {
                     id: 3,
-                    card_CN_name: '组件',
-                    card_EN_name: 'Component',
-                    path: 'mobile'
+                    card_CN_name: '笔记',
+                    card_EN_name: 'test',
+                    path: 'test'
                 },
                 {
                     id: 3,

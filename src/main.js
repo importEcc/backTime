@@ -1,3 +1,10 @@
+/*
+ * @Author: 王精华
+ * @Date: 2020-05-30 14:44:33
+ * @LastEditTime: 2020-09-02 13:51:15
+ * @LastEditors: 王精华
+ * @Description: 
+ */
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -25,7 +32,7 @@ Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   /* 路由发生变化修改页面title */
   if (to.meta.title) {
-    document.title = to.meta.title
+    window.document.title = to.meta.title
   }
   next()
 })

@@ -1,0 +1,13 @@
+.mouse {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .dian {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #3cc;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+}

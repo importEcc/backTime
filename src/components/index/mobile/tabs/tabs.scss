@@ -1,0 +1,35 @@
+.tab-component{
+  width: 100%;
+  .tabs-title{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding:2% 10%;
+    background:#fff;
+  }
+  .tabs{
+    width: 100%;
+    display: flex;
+    background:#fff;
+    .tab-item{
+      flex: 1;
+      padding:10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color:#999;
+    }
+    .tabs-item-change{
+      color: #3cc;
+    }
+  }
+  .item-info{
+    .item-info-item{
+      padding: 10px;
+    background:#fff;
+    }
+    
+  }
+}

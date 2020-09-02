@@ -1,5 +1,6 @@
 .index_mine {
   position: relative;
+  overflow: hidden;
   .index {
     width: 100%;
     height: 500px;
@@ -24,7 +25,7 @@
       color: #fff;
       transition: all 0.4s;
       &:hover {
-        width: 100%;
+        width: 80%;
         color: #ff8b36;
       }
       .card_list {
@@ -57,20 +58,8 @@
       .index_info {
         width: 90%;
         padding: 4.5%;
-        border: 1px solid #fff;
         display: flex;
         justify-content: space-between;
-        .index_info_box {
-          width: 47.5%;
-          height: 300px;
-          border-radius: 10px;
-        }
-        .box_left {
-          background: pink;
-        }
-        .box_right {
-          background: #3cc;
-        }
       }
     }
   }
@@ -78,7 +67,6 @@
     width: 100%;
     background-image: url('../../assets/bg_next.jpg');
     background-size: 100% 100%;
-
     transition: all 0.5s;
   }
   .index_huakuai {

@@ -1,4 +1,23 @@
 .mobile{
     width: 100%;
-    
+    padding-top: 20px;
+    position: relative;
+    .selectSize{
+        width: 100px;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        color:#000;
+        background:#fff;
+        padding: 10px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:last-child{
+            top: 40%;
+        }
+    }
+   
 }
