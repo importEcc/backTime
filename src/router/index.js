@@ -1,7 +1,7 @@
 /*
  * @Author: 王精华
  * @Date: 2020-05-30 14:44:33
- * @LastEditTime: 2020-09-02 16:15:20
+ * @LastEditTime: 2020-09-10 13:38:33
  * @LastEditors: 王精华
  * @Description:
  */
@@ -49,6 +49,12 @@ const routes = [
     name: 'test',
     component: (resolve) => require(['@/pages/test/test'], resolve),
     meta: { title: '笔记', islogin: false, isLink: false },
+  },
+  {
+    path: '/mod',
+    name: 'mod',
+    component: (resolve) => require(['@/pages/mod/mod'], resolve),
+    meta: { title: '模块', islogin: false, isLink: false },
   },
 ]
 

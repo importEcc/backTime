@@ -1,3 +1,11 @@
+/*
+ * @Author: 王精华
+ * @Date: 2020-05-30 14:58:03
+ * @LastEditTime: 2020-09-03 17:02:44
+ * @LastEditors: 王精华
+ * @Description: 
+ */
+// const CompressionPlugin = require('compression-webpack-plugin')
 module.exports = {
   publicPath: './',
   assetsDir: 'assets',
@@ -37,4 +45,26 @@ module.exports = {
       },
     },
   },
+  // configureWebpack: {
+  //   plugins: [
+  //     new CompressionPlugin({
+  //       filename: '[path].gz',
+  //       algorithm: 'gzip',
+  //       test: /\.js$|\.css$|\.html$/,
+  //       threshold: 10240,
+  //       minRatio: 0.8,
+  //     }),
+  //     new CompressionPlugin({
+  //       filename: '[path].br',
+  //       algorithm: 'brotliCompress',
+  //       test: /\.(js|css|html|svg)$/,
+  //       compressionOptions: {
+  //         level: 11,
+  //       },
+  //       threshold: 10240,
+  //       minRatio: 0.8,
+  //     }),
+  //   ],
+  // }
+
 }

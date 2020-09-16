@@ -1,0 +1,170 @@
+{
+  "id": "2044729",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "16845908",
+      "name": "add_24px",
+      "font_class": "add_24px",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "16846017",
+      "name": "error_outline_24px",
+      "font_class": "error_outline_24px",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "16846111",
+      "name": "more_horiz_24px备份 2",
+      "font_class": "more_horiz_24pxbeifen2",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "16846140",
+      "name": "arrow_left_24px",
+      "font_class": "arrow_left_24px",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "16846181",
+      "name": "arrow_right_24px",
+      "font_class": "arrow_right_24px",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "16846210",
+      "name": "arrow_drop_up_24px",
+      "font_class": "arrow_drop_up_24px",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "16846221",
+      "name": "arrow_drop_down_24px",
+      "font_class": "arrow_drop_down_24px",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "16846264",
+      "name": "arrow_back_24px",
+      "font_class": "arrow_back_24px",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "16846269",
+      "name": "chevron_left_24px",
+      "font_class": "chevron_left_24px",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "16846281",
+      "name": "chevron_right_24px",
+      "font_class": "chevron_right_24px",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "16846337",
+      "name": "expand_more_24px",
+      "font_class": "expand_more_24px",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "16846339",
+      "name": "expand_less_24px",
+      "font_class": "expand_less_24px",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "16846514",
+      "name": "date_range_24px",
+      "font_class": "date_range_24px",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "16846566",
+      "name": "delete_24px",
+      "font_class": "delete_24px",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "16846581",
+      "name": "visibility",
+      "font_class": "visibility",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "16846593",
+      "name": "search_24px",
+      "font_class": "search_24px",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "16846768",
+      "name": "smsadd",
+      "font_class": "smsadd",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "16846881",
+      "name": "check_circle_24px",
+      "font_class": "check_circle_24px",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "16846895",
+      "name": "notifications_none_24px",
+      "font_class": "notifications_none_24px",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "16847080",
+      "name": "mic-24px",
+      "font_class": "mic-24px",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "16847085",
+      "name": "QR_code_24px",
+      "font_class": "QR_code_24px",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "16942294",
+      "name": "后退",
+      "font_class": "houtui",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "16942295",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}

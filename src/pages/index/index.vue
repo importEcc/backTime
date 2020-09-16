@@ -74,9 +74,9 @@ export default {
                 },
                 {
                     id: 3,
-                    card_CN_name: '组件',
-                    card_EN_name: 'Component',
-                    path: 'mobile'
+                    card_CN_name: '模块',
+                    card_EN_name: 'mod',
+                    path: 'mod'
                 },
                 {
                     id: 3,

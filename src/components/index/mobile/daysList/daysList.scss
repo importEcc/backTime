@@ -1,0 +1,40 @@
+.days-list{
+  margin-top: 15px;
+  padding:15px ;
+  background: #fff;
+  .days{
+    .days-head{
+      display: flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .days-head-info{
+        cursor: pointer;
+      }
+    }
+    .day-list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .week{
+
+      }
+      
+    }
+    .days{
+      margin-top: 15px;
+      .day{
+        color: #999;
+        width: 14.2%;
+        height: 50px;
+        text-align: center;
+
+      }
+      .colored{
+        color:#000;
+      }
+    }
+    
+  }
+}

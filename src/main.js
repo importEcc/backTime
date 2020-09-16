@@ -1,7 +1,7 @@
 /*
  * @Author: 王精华
  * @Date: 2020-05-30 14:44:33
- * @LastEditTime: 2020-09-02 13:51:15
+ * @LastEditTime: 2020-09-03 16:47:23
  * @LastEditors: 王精华
  * @Description: 
  */
@@ -18,6 +18,7 @@ import { default as api } from './untils/api'
 import './mineStyle/style.scss' //样式重置文件
 import './mineStyle/borderStyle.scss' //1像素边框的解决方案
 import './mineStyle/scroll.scss' //滚动条样式
+import './assets/icon/initIcon/iconfont.css'//测试icon图标
 
 Vue.use(VueLazyload, {
   preLoad: 1.3,

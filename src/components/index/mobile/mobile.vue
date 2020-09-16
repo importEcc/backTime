@@ -1,7 +1,7 @@
 <!--
  * @Author: 王精华
  * @Date: 2020-06-13 17:04:56
- * @LastEditTime: 2020-09-02 11:37:36
+ * @LastEditTime: 2020-09-04 13:50:41
  * @LastEditors: 王精华
  * @Description: 
 -->
@@ -10,14 +10,16 @@
          :class="{'long':size == 1}">
         <div class="mobile_tab">
             <tabs></tabs>
+            <days-list></days-list>
         </div>
     </div>
 </template>
 <script>
 import tabs from './tabs/tabs'
+import daysList from './daysList/daysList'
 export default {
     name: 'mobile',
-    components: { tabs },
+    components: { tabs, daysList },
     data () {
         return {
 
