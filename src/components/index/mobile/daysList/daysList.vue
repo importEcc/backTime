@@ -1,7 +1,7 @@
 <!--
  * @Author: 王精华
  * @Date: 2020-09-04 13:49:38
- * @LastEditTime: 2020-09-16 18:15:19
+ * @LastEditTime: 2020-09-17 18:23:00
  * @LastEditors: 王精华
  * @Description: 
 -->
@@ -34,7 +34,22 @@
              :class="{'colored':item.color}"
              v-for="(item, index) in days"
              :key="index">
-          {{item.day}}
+          <div class="day-infoed"
+               :class="{'todayed':selectDay == index}"
+               @click="checkDay(index,item)">
+            <div class="day-top day-item">
+              <span v-show="item.isStop">{{item.topMessage}}</span>
+
+            </div>
+            <div class="today">
+              {{item.day}}
+            </div>
+            <div class="day-bot day-item">
+              <span v-show="item.isDoing"> {{item.botMessage}}</span>
+
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -53,9 +68,14 @@ export default {
       week: ['一', '二', '三', '四', '五', '六', '日'],//星期
       maxMonth: [1, 3, 5, 7, 8, 10, 12],//平月
       minMonth: [4, 6, 9, 11],//闰月
+      selectDay: ''
     }
   },
+  props: {
+
+  },
   created () {
+    this.selectDay = this.day
     this.init()
   },
   methods: {
@@ -84,7 +104,10 @@ export default {
         for (let a = 0; a < nowDate - 1; a++) {
           this.days.push({
             day: beforeDay - a,
-            color: false
+            color: false,
+            topMessage: '休',
+            botMessage: '卡',
+            beforedDay: true
           })
 
         }
@@ -92,7 +115,10 @@ export default {
         for (let a = 0; a < 6; a++) {
           this.days.push({
             day: beforeDay - a,
-            color: false
+            color: false,
+            topMessage: '休',
+            botMessage: '卡',
+            beforedDay: true
           })
 
         }
@@ -106,16 +132,24 @@ export default {
             let dayed = b + 1
             this.days.push({
               day: dayed,
-              color: false
+              color: false,
+              topMessage: '休',
+              botMessage: '卡',
+              lastDay: true
             })
           }
           // return
         }
         this.days.push({
           day: day,
-          color: true
+          color: true,
+          topMessage: '休',
+          botMessage: '卡',
+          isStop: false,
+          isDoing: false
         })
       }
+      this.days[this.day].isStop = true
       this.days.length = 42
     },
     getbeforeDay () {
@@ -193,6 +227,22 @@ export default {
         this.year++
       }
       this.init()
+    },
+    checkDay (index, item) {
+
+      this.selectDay = index
+      const list = this.days
+      if (item.beforedDay) {
+        this.beforDay()
+        this.selectDay = item.day
+        return
+      }
+      if (item.lastDay) {
+        this.nextDay()
+        console.log(this.days)
+        this.selectDay = item.day
+        return
+      }
     }
   },
 

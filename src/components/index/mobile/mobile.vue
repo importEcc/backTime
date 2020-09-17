@@ -1,7 +1,7 @@
 <!--
  * @Author: 王精华
  * @Date: 2020-06-13 17:04:56
- * @LastEditTime: 2020-09-04 13:50:41
+ * @LastEditTime: 2020-09-17 18:11:09
  * @LastEditors: 王精华
  * @Description: 
 -->
@@ -10,6 +10,7 @@
          :class="{'long':size == 1}">
         <div class="mobile_tab">
             <tabs></tabs>
+            <days-list></days-list>
             <days-list></days-list>
         </div>
     </div>

@@ -27,9 +27,36 @@
       .day{
         color: #999;
         width: 14.2%;
-        height: 50px;
+        height: 70px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1px 0;
+        border-radius: 12px;
+        cursor: pointer;
+        .day-item{
+          min-height: 20px;
+          font-size: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .day-top{
 
+        }
+        .day-bot{
+
+        }
+      }
+      .day-infoed{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+      .todayed{
+        background: #3cc;
+        color:#fff;
       }
       .colored{
         color:#000;
