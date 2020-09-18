@@ -1,7 +1,8 @@
 <!--
+import { async } from 'q';
  * @Author: 王精华
  * @Date: 2020-09-04 13:49:38
- * @LastEditTime: 2020-09-17 18:23:00
+ * @LastEditTime: 2020-09-18 18:01:35
  * @LastEditors: 王精华
  * @Description: 
 -->
@@ -35,7 +36,7 @@
              v-for="(item, index) in days"
              :key="index">
           <div class="day-infoed"
-               :class="{'todayed':selectDay == index}"
+               :class="{'todayed':selectDay == item.dd && item.yy == selectYear && item.mm == selectMonth}"
                @click="checkDay(index,item)">
             <div class="day-top day-item">
               <span v-show="item.isStop">{{item.topMessage}}</span>
@@ -68,7 +69,9 @@ export default {
       week: ['一', '二', '三', '四', '五', '六', '日'],//星期
       maxMonth: [1, 3, 5, 7, 8, 10, 12],//平月
       minMonth: [4, 6, 9, 11],//闰月
-      selectDay: ''
+      selectDay: '',
+      selectYear: '',
+      selectMonth: ''
     }
   },
   props: {
@@ -76,6 +79,8 @@ export default {
   },
   created () {
     this.selectDay = this.day
+    this.selectYear = this.year
+    this.selectMonth = this.month
     this.init()
   },
   methods: {
@@ -99,7 +104,6 @@ export default {
           nowNum -= 3
           break;
       }
-      // console.log(nowDate)
       if (nowDate != 0) {
         for (let a = 0; a < nowDate - 1; a++) {
           this.days.push({
@@ -107,7 +111,11 @@ export default {
             color: false,
             topMessage: '休',
             botMessage: '卡',
-            beforedDay: true
+            beforedDay: true,
+            date: `${this.year}.${this.month - 1}.${beforeDay - a}`,
+            yy: this.year,
+            mm: this.month - 1,
+            dd: beforeDay - a,
           })
 
         }
@@ -118,7 +126,11 @@ export default {
             color: false,
             topMessage: '休',
             botMessage: '卡',
-            beforedDay: true
+            beforedDay: true,
+            date: `${this.year}.${this.month - 1}.${beforeDay - a}`,
+            yy: this.year,
+            mm: this.month - 1,
+            dd: beforeDay - a,
           })
 
         }
@@ -135,7 +147,11 @@ export default {
               color: false,
               topMessage: '休',
               botMessage: '卡',
-              lastDay: true
+              lastDay: true,
+              date: `${this.year}.${this.month + 1}.${dayed}`,
+              yy: this.year,
+              mm: this.month + 1,
+              dd: dayed
             })
           }
           // return
@@ -146,10 +162,14 @@ export default {
           topMessage: '休',
           botMessage: '卡',
           isStop: false,
-          isDoing: false
+          isDoing: false,
+          date: `${this.year}.${this.month}.${day}`,
+          yy: this.year,
+          mm: this.month,
+          dd: day
         })
       }
-      this.days[this.day].isStop = true
+
       this.days.length = 42
     },
     getbeforeDay () {
@@ -215,6 +235,9 @@ export default {
         this.month = 12
         this.year--
       }
+      this.selectDay = this.day
+      this.selectYear = this.year
+      this.selectMonth = this.month
       this.init()
     },
     nextDay () {
@@ -226,23 +249,25 @@ export default {
         this.month = 1
         this.year++
       }
+      this.selectDay = this.day
+      this.selectYear = this.year
+      this.selectMonth = this.month
       this.init()
     },
     checkDay (index, item) {
-
-      this.selectDay = index
-      const list = this.days
+      this.selectDay = item.dd
+      this.selectYear = item.yy
+      this.selectMonth = item.mm
+      this.day = item.dd
       if (item.beforedDay) {
         this.beforDay()
-        this.selectDay = item.day
         return
       }
       if (item.lastDay) {
         this.nextDay()
-        console.log(this.days)
-        this.selectDay = item.day
         return
       }
+
     }
   },
 
